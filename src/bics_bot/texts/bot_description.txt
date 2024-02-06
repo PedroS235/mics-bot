@@ -1,2 +1,3 @@
-**BICS-BOT** is a bot made for the BICS Student Server.
+**MICS-BOT** was a bot originally made for the BICS Discord Student Server. I has now been
+adapted to be used in the MICS Discord Student Server. 
 It's purpose is to automate the server in someways such as let a user make a selection of the courses he/she attends, welcoming new members and much more.

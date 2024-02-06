@@ -13,6 +13,6 @@ class WelcomeEmbed(Embed):
         title = "Welcome on board👋"
         super().__init__(colour=Colour.blue(), title=title)
         self.description = (
-            f"Hey **{user_name}** and welcome to **{server_name}**, the **unofficial** BICS discord server!\n"
+            f"Hey **{user_name}** and welcome to **{server_name}**, the **unofficial** MICS discord server!\n"
             + read_txt("./bics_bot/texts/welcome_embed.txt")
         )

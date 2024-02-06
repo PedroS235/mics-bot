@@ -1,6 +1,9 @@
-There is something you should be aware of before utilizing this server.
-To view the course text channels on this server, you must either **enroll** in the course or **unenroll** from it.
+## Course Text Channels Enrollment/Unenrollment
+This server uses a system to mangage text channels for courses. The system is based on the concept of **enrollment** and **unenrollment**.
+This allows you to view the text channles for the courses you are taking or will be taking. _Note that this is not a replacement for the course registration system in **Guichet Etudiant**)
+
+## How To Use The System?
 The concept is extremely basic. Once you are aware of the courses you will be taking or are already taking, you can use the command '/enroll' to join the text channels for those courses.
 You can use the command "/unenroll" if you want to do the opposite, say due to an error.
 
-Note that you are always free to use any command.
+_Note that you are always free to use the command at any given time._

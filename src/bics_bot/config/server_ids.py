@@ -37,7 +37,6 @@ CATEGORY_STUDY_GROUPS = 1079091994015576094
 ROLE_INTRO_LIST = [
     "year-1",
     "year-2",
-    "year-3",
     "alumni",
     "erasmus",
     "incoming",

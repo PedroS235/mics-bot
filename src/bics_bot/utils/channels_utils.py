@@ -24,8 +24,6 @@ def retrieve_courses_text_channels_names(
         server_config["categories"]["semester-2"],
         server_config["categories"]["semester-3"],
         server_config["categories"]["semester-4"],
-        server_config["categories"]["semester-5"],
-        server_config["categories"]["semester-6"],
     ]
     categories = guild.by_category()
     text_channels = []
@@ -106,11 +104,9 @@ def retrieve_courses_text_channels_by_year(
         server_config["categories"]["semester-2"],
         server_config["categories"]["semester-3"],
         server_config["categories"]["semester-4"],
-        server_config["categories"]["semester-5"],
-        server_config["categories"]["semester-6"],
     ]
     categories = guild.by_category()
-    text_channels = {"year1": [], "year2": [], "year3": []}
+    text_channels = {"year1": [], "year2": []}
     for category in categories:
         if category[0].id in ids:
             if (category[0].name[-1]) == "1" or category[0].name[-1] == "2":
@@ -119,10 +115,6 @@ def retrieve_courses_text_channels_by_year(
                 ]
             if (category[0].name[-1]) == "3" or category[0].name[-1] == "4":
                 text_channels["year2"] += [
-                    text_channel.name for text_channel in category[1]
-                ]
-            if (category[0].name[-1]) == "5" or category[0].name[-1] == "6":
-                text_channels["year3"] += [
                     text_channel.name for text_channel in category[1]
                 ]
 
@@ -147,11 +139,9 @@ def retrieve_courses_text_channels(
         server_config["categories"]["semester-2"],
         server_config["categories"]["semester-3"],
         server_config["categories"]["semester-4"],
-        server_config["categories"]["semester-5"],
-        server_config["categories"]["semester-6"],
     ]
     categories = guild.by_category()
-    text_channels = {"year1": {}, "year2": {}, "year3": {}}
+    text_channels = {"year1": {}, "year2": {}}
     for category in categories:
         if category[0].id in ids:
             if (category[0].name[-1]) == "1" or category[0].name[-1] == "2":
@@ -173,17 +163,6 @@ def retrieve_courses_text_channels(
                     ]
                 else:
                     text_channels["year2"]["winter"] = [
-                        filter_course_name(text_channel.name)
-                        for text_channel in category[1]
-                    ]
-            else:
-                if int(category[0].name[-1]) % 2 == 0:
-                    text_channels["year3"]["summer"] = [
-                        filter_course_name(text_channel.name)
-                        for text_channel in category[1]
-                    ]
-                else:
-                    text_channels["year3"]["winter"] = [
                         filter_course_name(text_channel.name)
                         for text_channel in category[1]
                     ]
