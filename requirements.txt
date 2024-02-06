@@ -3,3 +3,4 @@ python-dotenv==0.21.1
 setuptools==67.1.0
 black
 pyyaml
+python-dateutil
