@@ -71,7 +71,6 @@ class CoursesCmd(commands.Cog):
             return
 
         enrolled_courses = self.get_courses_enrolled(user, guild)
-        print(enrolled_courses)
         view = CoursesDropdownView(enrolled_courses, True, guild)
         await interaction.response.send_message(
             embed=LoggerEmbed(

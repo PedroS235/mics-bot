@@ -28,6 +28,8 @@ def retrieve_courses_text_channels_names(
     categories = guild.by_category()
     text_channels = []
     for category in categories:
+        if category[0] is None:
+            continue
         if category[0].id in ids:
             for text_channel in category[1]:
                 text_channels.append(text_channel.name)
